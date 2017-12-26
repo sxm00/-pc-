@@ -1,0 +1,722 @@
+/*公共样式*/
+@charset "utf-8";
+html, body, div, ul, li, dl, dt, dd, img, p, a, span {margin: 0;padding: 0;}
+body {position: relative; user-select: none; -moz-user-select: none;font: 14px/1.5 '微软雅黑'; }
+li,ul,ol{list-style: none; }
+img {border: none; vertical-align: top;}
+a {text-decoration: none;  color: #fff; cursor: pointer; }
+.main{width: 1200px;max-width:1200px;height: 100%;position: relative;margin: auto;}
+.part1,.part2,.part3,.part4,.part5,.part6,.part7,.part8,.part9{
+    overflow: hidden;
+}
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 50px;
+    background: #222222;
+    overflow: hidden;
+    z-index: 999999;
+}
+.navwrap{
+    width: 1080px;
+    margin: 0 auto;
+    height: 50px;
+}
+.w80{
+    float: left;
+    width: 122px;
+    height: 50px;
+    line-height: 50px;
+}
+.w80 a,.nav_top li a,.nav_bottom li a{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+.nav{
+    float: left;
+    position: relative;
+    width: 872px;
+    height: 50px;
+    overflow: hidden;
+}
+.nav_top{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    transition: top 0.8s;
+}
+.nav_bottom{
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    left: 0;
+    top: 50px;
+    transition: top 0.8s;
+}
+.nav_top li,.nav_bottom li {
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    margin-right: 42px;
+}
+.w80 a:hover,.nav_top li a:hover,.nav_bottom li a:hover{
+    color: #db3a45;
+}
+.last_more{
+    float: left;
+    margin-right: 43px;
+}
+.btna{
+    display: block;
+    width: 20px;
+    height: 50px;
+    background: url("../img/nav2016-morebg2.png") no-repeat center center;
+    font-size: 0;
+}
+.btna:hover{
+    background: url("../img/nav2016-morebg.png") no-repeat center center;
+}
+.nav_search{
+    float: left;
+    width: 22px;
+    height: 50px;
+    margin: 0;
+}
+.nav_search .btns{
+    display: block;
+    width: 22px;
+    height: 50px;
+    font-size: 0;
+    background: url("../img/nav2016-search.png") no-repeat center center;
+}
+.nav_line i{
+    display: block;
+    width: 2px;
+    height: 17px;
+    margin-top: 17px;
+    background: #fff;
+}
+/*主体*/
+.part1{
+    height: 934px;
+    overflow: hidden;
+    background: url("../img/bg1.png") no-repeat center center;
+}
+.logo{
+    position: absolute;
+    top: 86px;
+    left: 136px;
+}
+.p1_1{
+    position: absolute;
+    left: 11px;
+    top: 53px;
+    animation: zoomIn 0.5s 0.6s backwards;
+    -webkit-animation: zoomIn 0.5s 0.6s backwards;
+}
+.p1_2{
+    position: absolute;
+    top: 0;
+    left: 285px;
+    animation: fadeInUp 0.8s backwards;
+    -webkit-animation: fadeInUp 0.8s backwards;
+}
+.p1_3{
+    position: absolute;
+    top: 366px;
+    left: 20px;
+    animation: zoomIn 0.5s 0.3s backwards;
+    -webkit-animation:zoomIn 0.5s 0.3s backwards;
+}
+.p1_4{
+    position: absolute;
+    top: 517px;
+    left: 569px;
+    animation: fadeInLeft 1s 0.9s backwards;
+    -webkit-animation: fadeInLeft 1s 0.9s backwards;
+}
+.p1_5 {
+    position: absolute;
+    left: 811px;
+    top: 629px;
+    animation: fadeInRight 1s 0.9s backwards;
+    -webkit-animation: fadeInRight 1s 0.9s backwards;
+}
+/*第二部分*/
+.part2{
+    position: relative;
+    height: 954px;
+    background:#e26142 url("../img/bg2.png") no-repeat center top;
+}
+
+.p2_1{position: absolute;left: 81px;top: 75px;}
+.p2_2{position: absolute;left: 221px;top: 86px;animation: fadeInUp 0.8s 0.5s  backwards;-webkit-animation: fadeInUp 0.8s 0.5s backwards;}
+.p2_3{position: absolute;left: 51px;top: 175px;animation: fadeInLeft 0.8s 0.5s  backwards;-webkit-animation: fadeInLeft 0.8s  0.5s backwards;}
+.p2_4{position: absolute;left: 684px;top: 281px;animation: fadeInRight 0.8s 0.5s  backwards;-webkit-animation: fadeInRight 0.8s 0.5s backwards;}
+.p2_5{position: absolute;left: 253px;top: 168px;animation: zoomIn 0.5s  ;-webkit-animation: zoomIn 0.5s   ;}
+.p2_6{position: absolute;left: 44px;top: 697px;}
+.p2_7{position: absolute;left: 786px;top: 595px;animation: rolling 15s linear infinite ;-webkit-animation: rolling 15s linear infinite ;}
+.p2_8{position: absolute;left: 966px;top: 663px;animation: rolling1 20s linear infinite ;-webkit-animation: rolling1 20s linear infinite ;}
+.part2 .text{position: absolute;left: 957px;top: 208px;width: 168px;color: #fff;line-height: 22px;}
+
+@keyframes rolling {
+    100%{transform: rotate(360deg);-webkit-transform: rotate(360deg)}
+}
+@-webkit-keyframes rolling {
+    100%{transform: rotate(360deg);-webkit-transform: rotate(360deg)}
+}
+@keyframes rolling1 {
+    100%{transform: rotate(-360deg);-webkit-transform: rotate(-360deg)}
+}
+@-webkit-keyframes rolling1 {
+    100%{transform: rotate(-360deg);-webkit-transform: rotate(-360deg)}
+}
+/*part3*/
+.part3{
+    position: relative;
+    height: 809px;
+    background: #2c2323;
+    overflow: hidden;
+}
+
+.bgcolor{
+    position: absolute;
+    left: 145px;
+    top: 162px;
+    width: 910px;
+    height: 516px;
+    background: #ae1c00;
+    animation: fadeInUp 0.8s backwards;
+    -webkit-animation: fadeInUp 0.8s backwards;
+}
+.videobox{
+    position: absolute;
+    left: 190px;
+    top: 200px;
+    width: 819px;
+    height: 516px;
+    cursor: pointer;
+    background: #ae1c00 url("../img/p3_1.png") no-repeat center center;
+    animation: fadeInDown 0.8s backwards ;
+    -webkit-animation: fadeInDown 0.8s backwards ;
+}
+.video{
+    position: absolute;
+    top: 307px;
+    left: 267px;
+}
+.text{
+    position: absolute;
+    top: 420px;
+    left: 104px;
+    width: 608px;
+    line-height: 18px;
+    color: #ffffff;
+}
+/*.part4*/
+.part4{
+    position: relative;
+    height: 953px;
+    background: url("../img/bg4.png") no-repeat center center;
+}
+.p4_1{
+    position: absolute;
+    left: 25px;
+    top: 111px;
+    animation: zoomIn 0.5s backwards;
+    -webkit-animation: zoomIn 0.5s backwards;
+}
+.p4_2{
+    position: absolute;
+    top: 321px;
+    left: 948px;
+    animation: fadeInRight 0.5s 0.5s backwards;
+    -webkit-animation: zoomIn 0.5s 0.5s backwards;
+}
+.p4_3{
+    position: absolute;
+    left:538px;
+    top: 408px;
+    animation: flipInX 0.8s backwards;
+    -webkit-animation: flipInX 0.8s backwards;
+}
+.clickbtn{
+    position: absolute;
+    cursor: pointer;
+}
+.part4 .bjtj{
+    position: absolute;
+    top: 667px;
+    left: 589px;
+}
+.part4 .add{
+    position: absolute;
+    top: 667px;
+    left: 677px;
+    animation: scale 1s linear infinite;
+    -webkit-animation: scale 1s linear infinite;
+}
+@keyframes scale {
+    0%,100%{
+        transform: scale(0.8);-webkit-transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);-webkit-transform: scale(1.2);
+    }
+}
+@-webkit-keyframes scale {
+    0%,100%{
+        transform: scale(0.8);-webkit-transform: scale(0.8);
+    }
+    50%{
+        transform: scale(1.2);-webkit-transform: scale(1.2);
+    }
+}
+.part4 .text1{
+    position: absolute;
+    top: 423px;
+    left: 929px;
+    width: 244px;
+    line-height: 18px;
+    color: #ce3917;
+    text-align: justify;
+}
+.part4 .text2{
+    position: absolute;
+    top: 788px;
+    left: 85px;
+    width: 244px;
+    line-height: 18px;
+    color: #ffffff;
+    text-align: justify;
+}
+ .showMeg{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: url("../img/bgcolor.png") repeat center center;
+    overflow: hidden;
+    z-index: 15;
+ /*   animation: zommIn 2s 0.3s backwards;
+    -webkit-animation: zommIn 2s 0.3s backwards;*/
+    display: none;
+}
+
+ .circle{
+    position: absolute;
+    left: 451px;
+    top: 241px;
+    animation: bounceIn 2s 0.3s backwards;
+    -webkit-animation: bounceIn 2s 0.3s backwards;
+}
+ .p4_4 {
+    position: absolute;
+    left: 273px;
+    top: 115px;
+}
+.close {
+    position: absolute;
+    left: 963px;
+    top: 162px;
+    cursor: pointer;
+}
+ .text3 {
+    position: absolute;
+    left: 705px;
+    top: 538px;
+    width: 143px;
+    line-height: 18px;
+    text-align: justify;
+}
+ /*part5*/
+.part5{
+    height: 955px;
+    background: url("../img/bg5.png") no-repeat center center;
+    position: relative;
+}
+.p5_1{
+    position: absolute;
+    top: 380px;
+    left: -59px;
+    animation: zoomIn 0.5s;
+    -webkit-animation: zoomIn 0.5s;
+}
+.p5_2{
+    position: absolute;
+    top: 547px;
+    left: 951px;
+    animation: zoomIn 0.5s;
+    -webkit-animation: zoomIn 0.5s;
+}
+.p5_3 {
+    position: absolute;
+    left: -183px;
+    top: 284px;
+}
+.p5_4 {
+    position: absolute;
+    left: 293px;
+    top: 399px;
+    animation: flipInX 0.8s;
+    -webkit-animation: flipInX 0.8s;
+}
+.p5_5 {
+    position: absolute;
+    left: 119px;
+    top: 154px;
+    animation: fadeInLeft 0.5s 0.5s backwards;
+    -webkit-animation: fadeInLeft 0.5s 0.5s backwards;
+}
+.part5 .bjtj{
+    position: absolute;
+    top: 265px;
+    left: 387px;
+}
+.part5 .add{
+    position: absolute;
+    top: 265px;
+    left: 476px;
+    animation: scale 1s linear infinite;
+    -webkit-animation: scale 1s linear infinite;
+}
+.part5 .text1{
+    position: absolute;
+    left: 119px;
+    top: 257px;
+    width: 244px;
+    text-align: justify;
+    line-height: 18px;
+}
+.part5 .text2{
+    position: absolute;
+    left: 390px;
+    top: 847px;
+    width: 215px;
+    text-align: justify;
+    line-height: 18px;
+}
+.p5_6{
+    position: absolute;
+    left: 318px;
+    top: 166px;
+}
+/*part6*/
+.part6{
+    position: relative;
+    height: 954px;
+    background: #e28a42;
+}
+.p6_1{
+    position: absolute;
+    left: 689px;
+    top: 107px;
+    animation: fadeInUp 0.5s 0.5s backwards;
+    -webkit-animation: fadeInUp 0.5s 0.5s backwards;
+}
+.p6_2{
+    position: absolute;
+    left: -18px;
+    top: 412px;
+    animation: zoomIn 0.5s 0.5s backwards;
+    -webkit-animation: zoomIn 0.5s 0.5s backwards;
+}
+.p6_3 {
+    position: absolute;
+    left: 42px;
+    top: 622px;
+    animation: fadeInRight 0.5s 0.5s backwards;
+    -webkit-animation: fadeInRight 0.5s 0.5s backwards;
+}
+.p6_5 {
+    position: absolute;
+    left: 114px;
+    top: 112px;
+    animation: flipInX 0.8s;
+    -webkit-animation: flipInX 0.8s;
+}
+.p6_4 {
+    position: absolute;
+    left: 252px;
+    top: 118px;
+    z-index: 10;
+    animation: fadeInRight 0.5s backwards;
+    -webkit-animation: fadeInRight 0.5s backwards;
+}
+.part6 .bjtj{
+    position: absolute;
+    left: 29px;
+    top: 328px;
+}
+.part6 .add{
+    position: absolute;
+    left: 119px;
+    top: 328px;
+    animation: scale 1s linear infinite;
+    -webkit-animation: scale 1s linear infinite;
+}
+.part6 .text1{
+    position: absolute;
+    left: 545px;
+    top: 657px;
+    width: 266px;
+    z-index: 10;
+}
+.part6 .text1 span {
+    background: #000;
+    color: #fff;
+    margin-top: 3px;
+    line-height: 18px;
+    display: block;
+    padding: 0 9px;
+    text-align: justify;
+}
+.part6 .text2{
+    position: absolute;
+    left: 945px;
+    top: 856px;
+    width: 263px;
+    line-height: 18px;
+    text-align: justify;
+}
+.p6_6{
+    position: absolute;
+    left: 241px;
+    top: 184px;
+}
+.p6_6 .text3{
+    position: absolute;
+    left: 681px;
+    top: 610px;
+    width: 154px;
+    line-height: 18px;
+    text-align: justify;
+}
+/*.part7*/
+.part7{
+    height: 945px;
+    background: #342c2d;
+    position: relative;
+}
+.p7_1{
+    position: absolute;
+    left: -116px;
+    top: 40px;
+}
+.p7_2{
+    position: absolute;
+    left: 332px;
+    top: 53px;
+    animation: fadeInUp 0.8s backwards;
+    -webkit-animation: fadeInUp 0.8s backwards;
+}
+.p7_3{
+    position: absolute;
+    left: 435px;
+    top: 115px;
+    animation: zoomIn 0.5s 0.5s backwards;
+    -webkit-animation: zoomIn 0.5s 0.5s backwards;
+}
+.p7_5{
+    position: absolute;
+    left: 452px;
+    top: 372px;
+    animation: flipInX 0.8s;
+    -webkit-animation: flipInX 0.8s;
+}
+.part7 .bjtj{
+    position: absolute;
+    left: 999px;
+    top: 745px;
+}
+.part7 .add {
+    position: absolute;
+    left: 1088px;
+    top: 745px;
+    animation: scale 1s linear infinite;
+    -webkit-animation: scale 1s linear infinite;
+}
+.part7 .text1{
+    position: absolute;
+    left: 60px;
+    top: 139px;
+    width: 244px;
+    line-height: 20px;
+    text-align: justify;
+    color: #fff;
+}
+.part7 .text2{
+    position: absolute;
+    left: 918px;
+    top: 816px;
+    width: 287px;
+    line-height: 18px;
+    text-align: justify;
+    color: #fff;
+}
+.p7_4{
+    position: absolute;
+    left: 213px;
+    top: 124px;
+}
+.part7 .text3{
+    position: absolute;
+    left: 616px;
+    top: 558px;
+    width: 256px;
+    line-height: 18px;
+    text-align: justify;
+}
+/*part8*/
+.part8{
+    position: relative;
+    height: 952px;
+    background: url("../img/bg8.png") no-repeat center center;
+}
+.p8_1{
+    position: absolute;
+    left: 564px;
+    top: 528px;
+    animation: flipInX 0.8s;
+    -webkit-animation: flipInX 0.8s;
+}
+.p8_3 {
+    position: absolute;
+    left: 827px;
+    top: 760px;
+    animation: fadeInRight 0.5s 0.5s backwards;
+    -webkit-animation: fadeInRight 0.5s 0.5s backwards;
+}
+.p8_4 {
+    position: absolute;
+    left: 385px;
+    top: 36px;
+    animation: shake 1s 0.5s backwards;
+    -webkit-animation: shake 1s 0.5s backwards;
+}
+.part8 .text1{
+    position: absolute;
+    left: 901px;
+    top: 179px;
+    width: 263px;
+}
+.part8 .bjtj{
+    position: absolute;
+    left: 762px;
+    top: 200px;
+}
+.part8 .add{
+    position: absolute;
+    top: 200px;
+    left: 850px;
+    animation: scale 1s linear infinite;
+    -webkit-animation: scale 1s linear infinite;
+}
+.part8 .text2{
+    position: absolute;
+    left: 823px;
+    top: 835px;
+    width: 340px;
+    line-height: 18px;
+    text-align: justify;
+}
+.p8_2{
+    position: absolute;
+    left: 209px;
+    top: 150px;
+}
+.part8 .text3{
+    position: absolute;
+    left: 502px;
+    top: 565px;
+    width: 186px;
+    line-height: 18px;
+    text-align: justify;
+}
+.part9{
+    height: 854px;
+    background: url("../img/bg9.png") no-repeat center center;
+}
+.part9 .swiper-container{
+    width: 640px;
+    height: 854px;
+}
+.part9 .swiper-button-prev{
+    left: 152px;
+    width: 52px;
+    height: 79px;
+    background: url("../img/leftbtn.png") no-repeat center center;
+}
+.part9 .swiper-button-next{
+    right: 152px;
+    width: 52px;
+    height: 79px;
+    background: url("../img/rightbtn.png") no-repeat center center;
+}
+/*part10*/
+.part10 {
+    height: 609px;
+    background: #2b2529;
+    padding-top: 85px;
+}
+.part10 .main {
+    height: 278px;
+    background: #fff;
+    padding-top: 22px;
+}
+.leftTeam{
+    width: 254px;
+    height: 228px;
+    padding: 30px 0 0 278px;
+    background: url(../img/p10_1.png) no-repeat 96px 96px;
+    line-height: 26px;
+    border-right: 1px solid #000;
+    float: left;
+}
+.pastshow{
+    width: 18px;
+    font-weight: bold;
+    float: left;
+    font-size: 18px;
+    line-height: 20px;
+    margin: 85px 0 0 71px;
+}
+.part10 .swiperCon{
+    width: 422px;
+    height: 231px;
+    margin-left: 62px;
+    float: left;
+    margin-top: 27px;
+    position: relative;
+}
+.part10 .swiper-slide img {
+    border: 1px solid #000;
+    width: 194px;
+    height: 198px;
+}
+.part10 .swiperCon .swiper-slide {
+    font-weight: bold;
+    text-align: center;
+}
+.ss_a{
+    text-decoration: none;
+    color: #000000;
+}
+.part10 .swiper-button-prev{
+    left: -51px;
+    background: url("../img/btn_left.png") no-repeat center center;
+}
+.part10 .swiper-button-next{
+    right: -51px;
+    background: url("../img/btn_right.png") no-repeat center center;
+}
+.review{
+    position: absolute;
+    top: 102px;
+    left: 149px;
+    z-index: 18;
+}
