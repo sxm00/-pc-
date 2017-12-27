@@ -325,7 +325,7 @@ a {text-decoration: none;  color: #fff; cursor: pointer; }
     top: 162px;
     cursor: pointer;
 }
- .text3 {
+.text3 {
     position: absolute;
     left: 705px;
     top: 538px;
@@ -404,6 +404,14 @@ a {text-decoration: none;  color: #fff; cursor: pointer; }
     position: absolute;
     left: 318px;
     top: 166px;
+}
+.part5 .text3 {
+    position: absolute;
+    left: 715px;
+    top: 349px;
+    width: 143px;
+    line-height: 18px;
+    text-align: justify;
 }
 /*part6*/
 .part6{
@@ -488,13 +496,20 @@ a {text-decoration: none;  color: #fff; cursor: pointer; }
     left: 241px;
     top: 184px;
 }
-.p6_6 .text3{
+.part6 .text3{
     position: absolute;
     left: 681px;
-    top: 610px;
+    top: 599px;
     width: 154px;
     line-height: 18px;
     text-align: justify;
+}
+.part6 .circle {
+    position: absolute;
+    left: 451px;
+    top: 257px;
+    animation: bounceIn 2s 0.3s backwards;
+    -webkit-animation: bounceIn 2s 0.3s backwards;
 }
 /*.part7*/
 .part7{
@@ -637,6 +652,14 @@ a {text-decoration: none;  color: #fff; cursor: pointer; }
     line-height: 18px;
     text-align: justify;
 }
+.part8 .circle {
+    position: absolute;
+    left: 340px;
+    top: 268px;
+    animation: bounceIn 2s 0.3s backwards;
+    -webkit-animation: bounceIn 2s 0.3s backwards;
+}
+/*part9*/
 .part9{
     height: 854px;
     background: url("../img/bg9.png") no-repeat center center;
@@ -707,10 +730,14 @@ a {text-decoration: none;  color: #fff; cursor: pointer; }
     color: #000000;
 }
 .part10 .swiper-button-prev{
+    position: absolute;
+    z-index: 18;
     left: -51px;
     background: url("../img/btn_left.png") no-repeat center center;
 }
 .part10 .swiper-button-next{
+    position: absolute;
+    z-index: 18;
     right: -51px;
     background: url("../img/btn_right.png") no-repeat center center;
 }

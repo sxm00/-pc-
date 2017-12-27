@@ -57,11 +57,11 @@
 </div>
 <!--主体-->
 <div class="part1">
-  <div class="main">
+  <div class="main" id="scene">
       <img src="img/logo.png"  class="logo">
-      <img src="img/p1_1.png" id="indexg0" class="p1_1" />
-      <img src="img/p1_2.png" id="indexg1" class="p1_2" />
-      <img src="img/p1_3.png" id="indexg2" class="p1_3" />
+      <img src="img/p1_1.png" id="indexg0" class="p1_1 in"/>
+      <img src="img/p1_2.png" id="indexg1" class="p1_2 in"/>
+      <img src="img/p1_3.png" id="indexg2" class="p1_3 in"/>
       <img src="img/p1_4.png" class="p1_4" />
       <img src="img/p1_5.png" class="p1_5" />
   </div>
@@ -86,7 +86,9 @@
       <div class="bgcolor wow"></div>
       <div class="videobox wow">
           <img src="img/video.png" class="video"/>
-          <p class="text">本期潮流风报邀请到杨玏，他是《小丈夫》中的陆小贝，是《致青春》中的陈孝正，也是《何以笙箫默》中的路远风， 但他今天却是我们的时空列车司机，带你我回到过去，以怀旧感来诠释当代男装造型，展现经典亦是永恒的时装风格。</p>
+          <p class="text">
+              本期潮流风报邀请到杨玏，他是《小丈夫》中的陆小贝，是《致青春》中的陈孝正，也是《何以笙箫默》中的路远风，但他今天却是我们的时空列车司机，带你我回到过去，以怀旧感来诠释当代男装造型，展现经典亦是永恒的时装风格。
+          </p>
       </div>
     </div>
 </div>
@@ -221,7 +223,7 @@
     <div class="showMeg">
         <div class="main">
             <img src="img/circle.png" class="circle"/>
-            <img src="img/p7_4.png" class="p7_4"/>
+            <img src="img/p8_2.png" class="p7_4"/>
             <img src="img/close.png" class="close"/>
             <p class="text3">这是一场印花元素之间的时髦较量，印花衬衫搭配同样印花丰富的夹克，选择高领针织衫作内搭突出造型层次。当运用多处印花时更要注意风格，衬衫上的碎花与夹克上的图腾印花恰恰相得益彰，传达出高贵典雅之风情。</p>
         </div>
@@ -230,7 +232,7 @@
 <!--第九部分-->
 <div class="part9">
     <div class="main">
-       <div class="swiper-container">
+       <div class="swiper-container swiperCon0">
            <div class="swiper-wrapper">
                <div class="swiper-slide"><img src="img/1.jpg"/></div>
                <div class="swiper-slide"><img src="img/2.jpg"/></div>
@@ -325,12 +327,57 @@
 
 
 
+<!--第一部分鼠标放上去图片跟着移动-->
+<script type="text/javascript">
+    $(function(){
+        var positionX = 0;
+        var positionY = 0;
 
+        $('.main').mousemove(function(e) {
+            var x = e.clientX, y = e.clientY;
+            if(positionX === 0 && positionY === 0){
+                positionX = x;
+                positionY = y;
+            }
+            if(x > positionX && y < positionY){
+                $('.p1_1').stop().animate({'left':11,'top':53},'800',"easeOutCubic");
+                $('.p1_2').stop().animate({'right':285,'top':0},'800',"easeOutCubic");
+                $('.p1_3').stop().animate({'left':20,'top':366},'800',"easeOutCubic");
+                positionX = x;
+                positionY = y;
+            }else if(x > positionX && y > positionY){
+                $('.p1_1').stop().animate({'left':-5,'top':43},'800',"easeOutCubic");
+                $('.p1_2').stop().animate({'right':265,'top':-10},'800',"easeOutCubic");
+                $('.p1_3').stop().animate({'left':20,'top':354},'800',"easeOutCubic");
+                positionX = x;
+                positionY = y;
+            }else if(x < positionX && y < positionY){
+                $('.p1_1').stop().animate({'left':11,'top':53},'800',"easeOutCubic");
+                $('.p1_2').stop().animate({'right':285,'top':0},'800',"easeOutCubic");
+                $('.p1_3').stop().animate({'left':30,'top':366},'800',"easeOutCubic");
+                positionX = x;
+                positionY = y;
+            }else if(x < positionX && y > positionY){
+                $('.p1_1').stop().animate({'left':-5,'top':43},'800',"easeOutCubic");
+                $('.p1_2').stop().animate({'right':265,'top':-10},'800',"easeOutCubic");
+                $('.p1_3').stop().animate({'left':30,'top':354},'800',"easeOutCubic");
+                positionX = x;
+                positionY = y;
+            }
 
+        })
 
-
-
-
+        $.extend($.easing,{
+            easeOutBack:function(x,t,b,c,d,s){
+                if (s == undefined) s = 1.70158;
+                return c*((t=t/d-1)*t*((s+1)*t + s) + 1) + b;
+            },
+            easeOutCubic: function (x, t, b, c, d) {
+                return c * ((t = t / d - 1) * t * t + 1) + b;
+            }
+        });
+    })
+</script>
 
 <!--引入wowjs-->
 <script src="js/wow.min.js"></script>
@@ -339,7 +386,7 @@
 </script>
 <!--运行swiper-->
 <script>
-    var mySwiper = new Swiper ('.swiper-container', {
+    var mySwiper = new Swiper ('.swiperCon0', {
         on:{
             init: function(){
                 swiperAnimateCache(this); //隐藏动画元素
@@ -378,51 +425,18 @@
      $(".main").mousemove(function (e) {
 
         })
-    $(".part4 .add").click(function () {
-        $(".part4 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
+
+     $(".add").click(function () {
+         $(this).parent().parent().siblings(".showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
+     })
+    $(".bjtj").click(function () {
+        $(this).parent().parent().siblings(".showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
     })
-    $(".part4 .bjtj").click(function () {
-        $(".part4 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
+    $(".close").click(function () {
+        $(this).parent().parent().css({"display":"none","animation":"zoomOut 0.5s "})
     })
-   $(".part4 .close").click(function () {
-       $(".part4 .showMeg").css("display","none")
-   })
-    $(".part5 .add").click(function () {
-        $(".part5 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part5 .bjtj").click(function () {
-        $(".part5 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part5 .close").click(function () {
-        $(".part5 .showMeg").css("display","none")
-    })
-    $(".part6 .add").click(function () {
-        $(".part6 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part6 .bjtj").click(function () {
-        $(".part6 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part6 .close").click(function () {
-        $(".part6 .showMeg").css("display","none")
-    })
-    $(".part7 .add").click(function () {
-        $(".part7 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part7 .bjtj").click(function () {
-        $(".part7 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part7 .close").click(function () {
-        $(".part7 .showMeg").css("display","none")
-    })
-    $(".part8 .add").click(function () {
-        $(".part8 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part8 .bjtj").click(function () {
-        $(".part8 .showMeg").css({"display":"block","animation":"zoomIn 0.5s "})
-    })
-    $(".part8 .close").click(function () {
-        $(".part8 .showMeg").css("display","none")
-    })
+
+
 </script>
 
 </body>
